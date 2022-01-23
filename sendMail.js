@@ -2289,7 +2289,7 @@ export const sendMail = async (req, res, next) => {
       secure: true, // true for 465, false for other ports
       auth: {
          user: STMP_USER,//process.env.STMP_USER, // generated ethereal user
-         pass: STMP_PASS + "#9+"// process.env.STMP_PASS, // generated ethereal password
+         pass: STMP_PASS// process.env.STMP_PASS, // generated ethereal password
       },
    });
    let info = await transporter.sendMail({
